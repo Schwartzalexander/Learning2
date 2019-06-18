@@ -33,5 +33,12 @@ public class BallControl : MonoBehaviour
         }
 
         GetComponent<Rigidbody>().AddForce(x, y, z);
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            this.gameObject.transform.position = new Vector3(100.0f+Random.Range(0.0f, 5.0f), 32.2f, 100.0f + Random.Range(0.0f, 5.0f));
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        }
+
     }
 }
