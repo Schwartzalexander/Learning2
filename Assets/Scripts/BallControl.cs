@@ -31,6 +31,10 @@ public class BallControl : MonoBehaviour
         {
             y = yForce;
         }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            y = -yForce;
+        }
 
         GetComponent<Rigidbody>().AddForce(x, y, z);
 
